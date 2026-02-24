@@ -93,9 +93,9 @@ uv run python server.py 启动服务即可
 ## Step 4: 启动mcp 服务
 
 另外打开一个终端
-cd GraphMaker/genie-client
-uv venv
-source .venv/bin/activate
+cd GraphMaker/genie-client  
+uv venv  
+source .venv/bin/activate  
 sh start.sh 即可
 
 

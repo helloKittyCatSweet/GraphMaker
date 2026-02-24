@@ -33,7 +33,7 @@ python
 
 打开一个终端
 
-cd joyagent-jdgenie/ui && sh start.sh 
+cd GraphMaker/ui && sh start.sh 
 
 如果报错参见上面信息前期准备看看有没有pnpm
 
@@ -44,7 +44,7 @@ cd joyagent-jdgenie/ui && sh start.sh
 
 另外打开一个终端
 
-cd joyagent-jdgenie/genie-backend && sh build.sh
+cd GraphMaker/genie-backend && sh build.sh
 
 出现[INFO] BUILD SUCCESS即可
 如有报错安装java>17,步骤见上
@@ -53,7 +53,7 @@ sh start.sh
 
 启动后，可以通过命令tail -f genie-backend_startup.log观察日志情况。
 
-ps 1: 可以动态适合自己key,编辑 joyagent-jdgenie/genie-backend/src/main/resources/application.yml,其中配置是可以添加多个模型，然后在不同模块下可以指定，比如在react模式下，我指定了claude-3-7-sonnet-v1，建议修改为适合自己的模型名字。
+ps 1: 可以动态适合自己key,编辑 GraphMaker/genie-backend/src/main/resources/application.yml,其中配置是可以添加多个模型，然后在不同模块下可以指定，比如在react模式下，我指定了claude-3-7-sonnet-v1，建议修改为适合自己的模型名字。
 settings: '{"claude-3-7-sonnet-v1": {
         "model": "claude-3-7-sonnet-v1",
         "max_tokens": 8192,
@@ -73,7 +73,7 @@ ps 2:修改完配置后，重新build.sh,然后start.sh
 另外打开一个终端
 
 ```
-cd joyagent-jdgenie/genie-tool
+cd GraphMaker/genie-tool
 pip install uv
 cd genie-tool
 uv sync
@@ -93,7 +93,7 @@ uv run python server.py 启动服务即可
 ## Step 4: 启动mcp 服务
 
 另外打开一个终端
-cd joyagent-jdgenie/genie-client
+cd GraphMaker/genie-client
 uv venv
 source .venv/bin/activate
 sh start.sh 即可
